@@ -45,7 +45,7 @@ def find_embeddings(data_folder_name):
     with open(csv_file_path, mode='w', newline='') as csv_file:
         csv_writer = csv.writer(csv_file)
         csv_writer.writerow(['filename', 'embedding'])
-        for idx, file_name in enumerate(photographer_folder_file[:1]):
+        for idx, file_name in enumerate(photographer_folder_file):
             print(idx)
             img_path = os.path.join(data_folder_name, file_name)
             img = cv2.imread(img_path)
